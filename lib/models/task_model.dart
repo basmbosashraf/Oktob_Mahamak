@@ -1,21 +1,14 @@
-class Task {
+import 'package:hive/hive.dart';
+
+part 'task_model.g.dart';
+
+@HiveType(typeId: 0)
+class Task extends HiveObject {
+  @HiveField(0)
   String title;
+
+  @HiveField(1)
   bool isCompleted;
 
   Task({required this.title, this.isCompleted = false});
-
-  Map<String, dynamic> toMap() {
-    return {
-      'title': title,
-      'isCompleted': isCompleted,
-    };
-  }
-
-  // للتحويل من Map عند القراءة
-  factory Task.fromMap(Map<dynamic, dynamic> map) {
-    return Task(
-      title: map['title'] ?? '',
-      isCompleted: map['isCompleted'] ?? false,
-    );
-  }
 }

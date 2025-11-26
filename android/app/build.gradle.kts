@@ -38,7 +38,7 @@ android {
         applicationId ="com.basmala.oktob_mahamak"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
-        versionCode = 6
+        versionCode = 8
         versionName = "1.1"
     }
 
